@@ -123,11 +123,8 @@ select{
 
 .btn-contrato{
   margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #2B612D;
-  padding: 10px 0;
+  padding: 10px 0px;
   text-align: center;
 }
 
@@ -245,10 +242,10 @@ fieldset {
   }
 
   .btn-contrato{
-    padding: 8px 40px;
+    padding: 8px 0px;
   }
   
   .btn-proposta{
-    padding: 8px 40px;
+    padding: 8px 35px;
   }
 }
