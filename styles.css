@@ -38,7 +38,7 @@ p{
   display: flex;
   align-items: center;
   gap: 15px;
-  width: 72%;
+  width: 85%;
   border-radius: 8px;
   padding: 8px;
 }
@@ -46,8 +46,8 @@ p{
 .btn{
   padding: 10px 45px;
   background-color: #2B612D;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
   color: #FFF;
   font-family: "Space Grotesk", sans-serif;
   font-size: 15px;
@@ -59,11 +59,10 @@ p{
   margin-top: 15px;
 }
 
-.btn-procuracao{
-  padding: 10px 45px;
+.btn-proposta{
   background-color: transparent;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #2B612D;
   color: #2B612D;
   font-family: "Space Grotesk", sans-serif;
   font-size: 15px;
@@ -123,10 +122,13 @@ select{
 }
 
 .btn-contrato{
-  background-color: transparent;
-  color: #2B612D;
-  text-decoration: none;
-  border: 1px solid #2B612D;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B612D;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .container-texto{
