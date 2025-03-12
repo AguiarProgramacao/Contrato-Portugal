@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gerador de Contrato Imigrei" />
+  <meta property="og:description" content="Facilitando e automatizando os seus serviços." />
+  <meta property="og:site_name" content="Imigrei Assessoria de Imigração" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <title>Contrato Portugal</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-um">
+      <div class="buttons-links">
+        <button type="button" class="btn btn-contrato">Portugal</button>
+        <a href="https://formulario-procuracao-imigrei.vercel.app/" type="button" class="btn btn-proposta">Procuração</a>
+      </div>
+      <div>
+        <h1>Contrato Portugal</h1>
+        <p>Preencha todos os dados do requerente 1 junto com a forma de pagamento e <b>não esqueça de colocar a data de
+          pagamento</b>. <br /> Ao selecionar na forma de pagamento "Pagamentos Diferentes", selecione a forma de pagamento
+          do requerente atual junto com a quantidade de parcelas.</p>
+      </div>
+    </div>
+    <div class="container-dois">
+      <form id="requerentes-form">
+        <div class="requerente">
+          <fieldset>
+            <legend>Dados do Requerente</legend>
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome completo do requerente" required>
+            <label>Nacionalidade:</label>
+            <input type="text" name="nacionalidade" placeholder="Nacionalidade do requerente" required>
+            <label>Estado Civil:</label>
+            <input type="text" name="estadoCivil" placeholder="Estado Civil do requerente" required>
+            <label>Data de Nascimento:</label>
+            <input type="date" name="dataNascimento" required>
+            <label>Cidade do Nascimento:</label>
+            <input type="text" name="localNascimento" placeholder="Cidade de Nascimento" required>
+            <label>Estado do Nascimento:</label>
+            <input type="text" name="estadoNascimento" placeholder="Estado de Nascimento" required>
+            <label>CPF:</label>
+            <input type="text" name="cpf" placeholder="CPF do Requerente (XXXXXXXXXXX)" required>
+            <label>CEP:</label>
+            <input class="input" type="text" id="cep" placeholder="Digite o CEP" name="cep">
+            <div class="endereco-um">
+              <div class="div">
+                <label>Endereço:</label>
+                <input class="input" type="text" id="endereco" name="endereco" placeholder="Automático" required>
+              </div>
+              <div class="div">
+                <label>Bairro:</label>
+                <input class="input" type="text" id="bairro" name="bairro" placeholder="Automático" required>
+              </div>
+              <div class="div">
+                <label>Cidade:</label>
+                <input class="input" type="text" id="cidade" name="cidade" placeholder="Automático" required>
+              </div>
+            </div>
+            <div class="endereco-dois">
+              <div class="div">
+                <label>Número:</label>
+                <input type="text" id="numero" placeholder="Preencher">
+              </div>
+              <div class="div">
+                <label>Complemento:</label>
+                <input class="input" type="text" id="complemento" name="complemento" placeholder="Preencher" />
+              </div>
+              <div class="div">
+                <label>Estado:</label>
+                <input class="input" type="text" id="estado" name="estado" placeholder="Automático" >
+              </div>
+            </div>
+            <label>Valor da Proposta:</label>
+            <input type="number" id="valor-proposta" value="0" min="0" step="0.01">
+            <label>Forma de Pagamento:</label>
+            <select id="forma-pagamento" name="formaPagamento">
+              <option value="">Selecionar</option>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto</option>
+              <option value="transferencia">Dinheiro</option>
+              <option value="pagamentosDiferente">Pagamentos Diferentes</option>
+            </select>
+            <div id="inputs-pagamentos-diferentes"></div>
+            <div id="parcelas">
+              <label>Quantidade de Parcelas:</label>
+              <input type="number" id="qntd-parcelas" name="qntdParcelas" value="0" min="0" />
+            </div>
+            <label>Data de Pagamento:</label>
+            <input type="date" id="data-inicial-pagamento" placeholder="Campo obrigatório" />
+          </fieldset>
+        </div>
+      </form>
+      <div class="functions-btn">
+        <button id="adicionar-requerente" class="btn btn-requerente">Adicionar Requerente</button>
+        <button id="gerar-pdf" class="btn btn-pdf">Gerar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
