@@ -56,6 +56,12 @@ document.getElementById("adicionar-requerente").addEventListener("click", () => 
   form.appendChild(novoRequerente);
 });
 
+document.getElementById('contratoSelect').addEventListener('change', function() {
+  if (this.value) {
+      window.location.href = this.value;
+  }
+});
+
 document.getElementById("forma-pagamento").addEventListener("change", (event) => {
   const container = document.getElementById("inputs-pagamentos-diferentes");
   const parcelasInput = document.getElementById("parcelas");

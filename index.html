@@ -22,13 +22,18 @@
   <div class="container">
     <div class="container-um">
       <div class="buttons-links">
-        <button type="button" class="btn btn-contrato">Portugal</button>
-        <a href="https://formulario-procuracao-imigrei.vercel.app/" type="button" class="btn btn-proposta">Procuração</a>
+        <select id="contratoSelect" class="btn btn-contrato">
+          <option value="https://gerador-de-contrato-imigrei.vercel.app/">Itália</option>
+          <option value="https://contrato-portugal.vercel.app/">Portugal</option>
+          <option value="https://contrato-espanha.vercel.app/">Espanha</option>
+        </select>
+        <a href="https://formulario-procuracao-imigrei.vercel.app/" class="btn btn-proposta">Procuração</a>
       </div>
       <div>
         <h1>Contrato Portugal</h1>
         <p>Preencha todos os dados do requerente 1 junto com a forma de pagamento e <b>não esqueça de colocar a data de
-          pagamento</b>. <br /> Ao selecionar na forma de pagamento "Pagamentos Diferentes", selecione a forma de pagamento
+            pagamento</b>. <br /> Ao selecionar na forma de pagamento "Pagamentos Diferentes", selecione a forma de
+          pagamento
           do requerente atual junto com a quantidade de parcelas.</p>
       </div>
     </div>
@@ -78,7 +83,7 @@
               </div>
               <div class="div">
                 <label>Estado:</label>
-                <input class="input" type="text" id="estado" name="estado" placeholder="Automático" >
+                <input class="input" type="text" id="estado" name="estado" placeholder="Automático">
               </div>
             </div>
             <label>Valor da Proposta:</label>
